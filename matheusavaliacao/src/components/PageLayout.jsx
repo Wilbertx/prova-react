@@ -12,7 +12,7 @@ export const PageLayout = () => {
       <Box>
         <Outlet />
       </Box>
-      <Box sx={{ width: 500 }}>
+      <Box>
         <BottomNavigation
           showLabels
           value={value}
