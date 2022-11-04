@@ -26,6 +26,7 @@ export default function BlogMain() {
             xs={12}
             md={8}
             sx={{
+                backgroundImage: '',
                 '& .markdown': {
                     py: 3,
                 },

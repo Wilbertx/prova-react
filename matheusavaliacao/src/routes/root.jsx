@@ -1,4 +1,5 @@
-import FetchProducts from '../components/FetchProducts';
+import BlogMain from '../components/BlogMain';
+import Noticias from '../components/Noticias';
 import Sobre from '../components/Sobre';
 import { HomeScreens } from '../screens/HomeScreens';
 
@@ -16,7 +17,7 @@ const ErrorComp = () => {
 
 
 const SobreScreen = () => {
-  return <div style={{ height: "300px" }}>Sobre Screen</div>;
+  return <div style={{ height: "300px" }}>Inicio</div>;
 };
 
 const route = createBrowserRouter(
@@ -24,8 +25,9 @@ const route = createBrowserRouter(
     <Route path="/" element={<PageLayout />} errorElement={<ErrorComp />}>
       <Route index path="/" element={<HomeScreens />}></Route>
       <Route path="/sobre" element={<SobreScreen />}></Route>
-      <Route path="/produtos" element={<FetchProducts />}></Route>
-      <Route path="/noticias" element={<Sobre />}></Route>
+      <Route path="/Noticias" element={<Noticias />}></Route>
+      <Route path="/Sobre" element={<Sobre />}></Route>
+      <Route path="/BlogMain" element={<BlogMain />}></Route>
     </Route>
   )
 );
