@@ -9,7 +9,7 @@ import {
   } from "@mui/material";
   import React, { useEffect, useState } from "react";
   
-  const FetchProducts = () => {
+  const Noticias = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
   
@@ -35,7 +35,7 @@ import {
         {isLoading ? (
           <div>Carregando</div>
         ) : (
-          data.map((produto) => (
+          data.map((noticias) => (
             <Grid
               item={true}
               xs={12}
@@ -43,10 +43,10 @@ import {
               lg={2}
               display="flex"
               alignItems="stretch"
-              key={produto.id}
+              key={noticias.id}
             >
               <Card
-                key={produto.id}
+                key={noticias.id}
                 style={{
                   height: "100%",
                   display: "flex",
@@ -58,15 +58,15 @@ import {
                 <CardMedia
                   component="img"
                   height="140"
-                  image={produto.thumbnail}
-                  alt={produto.brand}
+                  image={noticias.thumbnail}
+                  alt={noticias.brand}
                 />
                 <CardContent style={{ display: "flex", flexGrow: 1 }}>
                   <Typography gutterBottom variant="h5" component="div">
-                    {produto.title}
+                    {noticias.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    {produto.description}
+                    {noticias.description}
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -81,4 +81,4 @@ import {
     );
   };
   
-  export default FetchProducts;
+  export default Noticias;

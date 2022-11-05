@@ -1,4 +1,3 @@
-import BlogMain from '../components/BlogMain';
 import Noticias from '../components/Noticias';
 import Sobre from '../components/Sobre';
 import { HomeScreens } from '../screens/HomeScreens';
@@ -17,17 +16,15 @@ const ErrorComp = () => {
 
 
 const SobreScreen = () => {
-  return <div style={{ height: "300px" }}>Inicio</div>;
+  return <div style={{ height: "300px" }}></div>;
 };
 
 const route = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<PageLayout />} errorElement={<ErrorComp />}>
       <Route index path="/" element={<HomeScreens />}></Route>
-      <Route path="/sobre" element={<SobreScreen />}></Route>
       <Route path="/Noticias" element={<Noticias />}></Route>
       <Route path="/Sobre" element={<Sobre />}></Route>
-      <Route path="/BlogMain" element={<BlogMain />}></Route>
     </Route>
   )
 );
